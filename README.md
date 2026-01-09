@@ -61,7 +61,7 @@ The objective of this project was to:
 ├── count_vectors.txt
 ├── vocab.txt
 │
-├── Demo_video_s4040536/                # Application demo video
+├── Demo_video.mp4              # Application demo video
 ├── README.md
 ├── requirements.txt
 ```
