@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ item['Title'] }} - Details</title>
+</head>
+<body>
+    <!-- Review Title -->
+    <h1>{{ item['Title'] }}</h1>
+    
+    <!-- Clothing Title -->
+    <p><strong>Clothes Title:</strong> {{ item['Clothes Title'] }}</p>
+    <p><strong>Clothes Description:</strong> {{ item['Clothes Description'] }}</p>
+
+    <!-- Division, Department, and Class Name -->
+    <p>
+        <strong>Division Name:</strong> {{ item['Division Name'] }} |
+        <strong>Department Name:</strong> {{ item['Department Name'] }} |
+        <strong>Class Name:</strong> {{ item['Class Name'] }}
+    </p>
+
+    <!-- Reviewer's Age -->
+    <p><strong>Age:</strong> {{ item['Age'] }}</p>
+
+    <!-- Rating -->
+    <p><strong>Rating:</strong> {{ item['Rating'] }}</p>
+
+    <!-- Recommended Status -->
+    <p><strong>Recommended:</strong> {{ item['Recommended IND'] }}</p>
+
+    <!-- Full Review Text -->
+    <p><strong>Review Text:</strong> {{ item['Review Text'] }}</p>
+
+    <!-- Positive Feedback Count -->
+    <p><strong>Positive Feedback Count:</strong> {{ item['Positive Feedback Count'] }}</p>
+
+    <!-- Back to Search Results -->
+    <a href="/search?keyword={{ keyword }}">Go Back to Search Results</a>
+</body>
+</html>

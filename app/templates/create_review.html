@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Review</title>
+</head>
+<body>
+    <h1>Create a Review</h1>
+    
+    <form action="/review" method="POST">
+        <label for="title">Review Title:</label>
+        <input type="text" id="title" name="title" value="{{ title }}" required><br><br>
+
+        <label for="description">Review Description:</label>
+        <textarea id="description" name="description" required>{{ description }}</textarea><br><br>
+
+        <!-- Rating Field -->
+        <label for="rating">Rating (1-5):</label>
+        <select id="rating" name="rating" required>
+            <option value="1" {% if rating == '1' %}selected{% endif %}>1</option>
+            <option value="2" {% if rating == '2' %}selected{% endif %}>2</option>
+            <option value="3" {% if rating == '3' %}selected{% endif %}>3</option>
+            <option value="4" {% if rating == '4' %}selected{% endif %}>4</option>
+            <option value="5" {% if rating == '5' %}selected{% endif %}>5</option>
+        </select><br><br>
+
+        <!-- Division Name -->
+        <label for="division_name">Division Name:</label>
+        <select id="division_name" name="division_name" required>
+            {% for division in division_names %}
+                <option value="{{ division }}" {% if division == selected_division_name %}selected{% endif %}>{{ division }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <!-- Department Name -->
+        <label for="department_name">Department Name:</label>
+        <select id="department_name" name="department_name" required>
+            {% for department in department_names %}
+                <option value="{{ department }}" {% if department == selected_department_name %}selected{% endif %}>{{ department }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <!-- Class Name -->
+        <label for="class_name">Class Name:</label>
+        <select id="class_name" name="class_name" required>
+            {% for class in class_names %}
+                <option value="{{ class }}" {% if class == selected_class_name %}selected{% endif %}>{{ class }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <!-- Model's Recommendation - make it optional when getting recommendation -->
+        <label for="recommendation">Model's Recommendation:</label>
+        <input type="text" id="recommendation" name="recommendation" value="{{ recommendation }}">
+        <p>You can modify the model's recommendation if it's incorrect.</p><br>
+
+        <!-- Different button actions for getting recommendation and submitting review -->
+        <button type="submit" name="action" value="get_recommendation">Get Model's Recommendation</button>
+        <button type="submit" name="action" value="submit_review">Confirm and Submit Review</button>
+    </form>
+</body>
+</html>

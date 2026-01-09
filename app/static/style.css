@@ -1,0 +1,12 @@
+.hero-section {
+    background-color: rgba(0, 0, 0, 0.5); /* For dark overlay on image */
+    color: white;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}

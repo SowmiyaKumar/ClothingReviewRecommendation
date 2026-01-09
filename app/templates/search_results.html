@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+<h1>Search Results for "{{ keyword }}"</h1>
+
+{% if items %}
+    <p>{{ items|length }} clothing items matched your search.</p>
+    <ul>
+    {% for item in items %}
+        <li>
+            <strong>Clothing ID:</strong> {{ item['Clothing ID'] }}<br>
+            <strong>Title:</strong> <a href="/item/{{ item['Clothing ID'] }}?keyword={{ keyword }}">{{ item['Title'] }}</a><br>  <!-- Pass keyword in the URL -->
+            <strong>Division Name:</strong> {{ item['Division Name'] }}<br>
+            <strong>Department Name:</strong> {{ item['Department Name'] }}<br>
+            <strong>Class Name:</strong> {{ item['Class Name'] }}<br>
+            <strong>Review Snippet:</strong> {{ item['Review Text'][:50] }}...  <!-- Show first 50 characters of review -->
+        </li>
+        <hr>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No items matched your search.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container-fluid">
+        <!-- Cover Section -->
+        <div class="row">
+            <div class="col-12">
+                <div class="hero-section text-center py-5" style="background-image: url('/static/images/cover.png'); background-size: cover; background-position: center; min-height: 400px;">
+                    <h1 class="display-3" style="color: #ffffff; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">Welcome to the WardrobeWhiz</h1>
+                    <p class="lead" style="color: #f0f0f0; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);">Discover your perfect style from our collection</p>
+                    <a href="/review" class="btn btn-lg" style="background-color: #bcb0a5; color: white;border-radius: 5px; box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);">Submit a Review</a>
+                </div>                
+            </div>
+        </div>
+
+        
+        <!-- Search Tips Section -->
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card shadow" style="border: none;">
+                    <div class="card-body text-center py-5" 
+                        style="background-image: url('/static/images/search.png'); 
+                                background-size: cover; 
+                                background-position: center;
+                                position: relative;">
+                        <div style="background-color: rgba(255, 255, 255, 0.6); position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;"></div>
+                        <div style="position: relative; z-index: 2;">
+                            <h2 class="card-title" style="color: #000; text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5); font-weight: bold;">Search Tips</h2>
+                            <p style="color: #000; text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7); font-weight: bold;">
+                                Use the search bar to find exactly what you're looking for. You can search by item name, department, or even review titles.
+                            </p>
+                            <ul class="list-group list-group-flush text-center" style="background: none;">
+                                <li class="list-group-item" style="background-color: transparent; font-weight: bold;">Example 1: "Flattering shirt"</li>
+                                <li class="list-group-item" style="background-color: transparent; font-weight: bold;">Example 2: "Summer Dress"</li>
+                                <li class="list-group-item" style="background-color: transparent; font-weight: bold;">Example 3: "Cozy Jacket"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Featured Section -->
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="/static/images/dress.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Popular Category: Dresses</h5>
+                        <p class="card-text">Find the latest trends in dresses.</p>
+                        <a href="/class/Dresses" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="/static/images/tops.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">New Arrivals: Tops</h5>
+                        <p class="card-text">Check out our newest collection of tops.</p>
+                        <a href="/class/Tops" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="/static/images/jackets.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Best Sellers: Jackets</h5>
+                        <p class="card-text">Stay warm with our best-selling jackets.</p>
+                        <a href="/class/Jackets" class="btn btn-primary">Browse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
