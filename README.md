@@ -49,9 +49,10 @@ The objective of this project was to:
 │   ├── task1.ipynb                    # Text preprocessing & vocabulary creation
 │   ├── task2_3.ipynb                  # Feature engineering & ML experiments
 │
-├── assignment3.csv                    # Original dataset
-├── processed.csv                      # Cleaned & processed dataset
-├── assignment3_II.csv                   # App dataset (titles & descriptions)
+├── data
+|   ├── assignment3.csv                    # Original dataset
+|   ├── processed.csv                      # Cleaned & processed dataset
+|   ├── assignment3_II.csv                  # App dataset (titles & descriptions)
 │
 ├── fastText.model                     # Pre-trained FastText embeddings
 ├── fastText.model.wv.vectors_ngrams.npy
@@ -242,6 +243,9 @@ The application runs locally and can be accessed via browser.
 * Datasets and assignment specifications are provided by **RMIT University**
 * Used strictly for academic and portfolio demonstration
 * Focused on technical rigour and real-world applicability
+* The following file was generated during model training but could not be uploaded:
+  * fastText.model.wv.vectors_ngrams.npy (Large NumPy array containing FastText n-gram vectors)
+This file is automatically created when loading the FastText model and is not required to understand or review the project code.
 
 
 
